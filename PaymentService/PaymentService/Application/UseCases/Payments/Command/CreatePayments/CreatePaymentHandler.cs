@@ -68,7 +68,7 @@ namespace PaymentService.Application.UseCases.Payments.Command.CreatePayments
             //await client.PostAsync("http://localhost:7800/notification", content);
 
 
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            var factory = new ConnectionFactory() { HostName = "notification-container" };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
